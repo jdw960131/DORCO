@@ -73,12 +73,34 @@ img{border: none; vertical-align: top;}
   width: 200px;
   float: left;
   padding: 15px 0px;
+  box-sizing: border-box;
   padding-right: 80px; padding-left: 20px;
   /* border: 1px solid white; */
   box-sizing: border-box;
+  position:relative
+}
+#header .gnb>li .sub>li::before{
+  content: "";
+  display: block;
+  width: 10px; height: 10px;
+  background-color: #cfe942;
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#header .gnb>li .sub>li:hover::before{
+  opacity: 1;
+  left: 10px;
 }
 #header .gnb>li .sub>li>a{
   color: white;
+  padding-left: 10px;
+}
+#header .gnb>li .sub>li:hover>a{
+  color: #cfe942;
 }
 #header .button_wrap{
   /* border: 1px solid white; */
